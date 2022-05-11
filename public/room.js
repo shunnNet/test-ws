@@ -3,7 +3,7 @@ const url = new URL(location.href)
 const ROOM = url.searchParams.get('room')
 const NAME = url.searchParams.get('name')
 
-const SERVER = 'ws://localhost:8080/'
+const SERVER = `ws://${window.location.host}/`
 
 const ws = new WebSocket(SERVER)
 
