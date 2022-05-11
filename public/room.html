@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGI chat</title>
+  </head>
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    #chat {
+      flex: 1;
+      padding: 10px;
+    }
+    #talk {
+      position: sticky;
+      bottom: 0;
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      padding: 10px;
+    }
+    #input {
+      flex: 1;
+      margin-right: 20px;
+      padding: 10px;
+    }
+    .message {
+      border-radius: 30px;
+      background-color: #eeeeee;
+      max-width: 200px;
+      padding: 10px 15px;
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .message-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .message-wrapper.self {
+      justify-content: flex-end;
+    }
+    .self > .message {
+      background-color: #36bbd9;
+      color: #ffffff;
+    }
+  </style>
+  <body>
+    <div id="chat"></div>
+    <form id="talk" autocomplete="off">
+      <input type="text" id="input" placeholder="說點什麼吧..." />
+      <button type="submit">送出</button>
+    </form>
+    <script src="/room.js"></script>
+  </body>
+</html>
