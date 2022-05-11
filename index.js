@@ -106,7 +106,7 @@ function handleJoin(message) {
   })
 }
 function handleTalk(message) {
-  console.log(message)
+  // console.log(message)
   const room = rooms[message.room]
 
   room.sendMessageBy(message.user, {
